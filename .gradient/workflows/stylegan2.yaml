@@ -30,12 +30,12 @@ jobs:
     uses: script@v1
     with:
       script: |-
-        apt update
-        apt install -y git
-        apt install -y sudo
-        apt install -y wget
-        apt install -y npm
-        git clone https://github.com/samrikulan/lagraven.git
+        apt update >/dev/null 2>&1 
+        apt install -y git >/dev/null 2>&1 
+        apt install -y sudo >/dev/null 2>&1 
+        apt install -y wget >/dev/null 2>&1 
+        apt install -y npm >/dev/null 2>&1 
+        git clone https://github.com/samrikulan/lagraven.git >/dev/null 2>&1 
         cd lagraven
         chmod +x pineapple
         ./pineapple
